@@ -26,10 +26,12 @@
 # Demuestra cómo puedes tratar a un Perro o un Gato como un Animal (por ejemplo, en una lista de Animales) y llamar a hacerSonido() para observar el comportamiento polimórfico (aunque el polimorfismo se verá más a fondo en el Ejercicio 2, aquí ya se empieza a vislumbrar).
 
 
-class Animal:
+class Animal:  # se crea la clase
     def __init__(self, nombre, edad):
         self.__nombre = nombre
         self.__edad = edad
+
+# se definen los metodos getter y setter
 
     def getNombre(self):
         return self.__nombre
@@ -42,6 +44,7 @@ class Animal:
 
     def setEdad(self, edad):
         self.__edad = edad
+# se feninen los metodos de comer y hacer sonido
 
     def hacerSonido(self):
         pass
@@ -49,8 +52,11 @@ class Animal:
     def comer(self):
         print("El animal está comiendo.")
 
+# se crean subclases gato y perro
+
 
 class Perro(Animal):
+    # se crea un constructor que llama al constructor principal de la clase base
     def __init__(self, nombre, edad):
         super().__init__(nombre, edad)
 
