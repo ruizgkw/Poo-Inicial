@@ -31,7 +31,9 @@ class Animal:  # se crea la clase
         self.__nombre = nombre
         self.__edad = edad
 
-# se definen los metodos getter y setter
+# se definen los metodos getter y
+# getter nos permite tener acceso a atributo privados de una clase
+# Setter es un método público que se usa para modificar (cambiar) el valor de un atributo privado de una clase, de forma controlada y segura.
 
     def getNombre(self):
         return self.__nombre
