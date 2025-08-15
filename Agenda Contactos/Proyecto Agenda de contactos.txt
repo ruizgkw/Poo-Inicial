@@ -1,0 +1,115 @@
+###### Proyecto Agenda de contactos. 
+
+
+
+\####################################
+
+**DESCRIPCION DEL PROBLEMA**           #
+
+------------------------------------
+
+
+
+\- Almacenar Contactos (Nombre, Teléfono, email. dirección).
+
+\- Añadir nuevos contactos.
+
+\- Buscar contactos existentes.
+
+\- Actualizar información de contactos.
+
+\- Eliminar contactos.
+
+\- Listar todos los contactos.
+
+\- Guardar/cargar contactos desde un archivo.
+
+
+
+\####################################
+
+**IDENTIFICACION DE LAS ENTIDADES**    #
+
+------------------------------------
+
+
+
+\- Contacto: Representa cada entrada individual en nuestra agenda.
+
+\- Agenda Contactos: Gestiona la colección de contactos.
+
+\- Interfaz Consola: Maneja la interacción con el usuario.
+
+
+
+\####################################
+
+**DIAGRAMA CONCEPTUAL DE CLASES**      #
+
+------------------------------------
+
+
+
+
+
++-----------------+       +--------------------+       +----------------------+
+|   **CONTACTO**  |       | **AgendaContacto** |       | **InterfazContacto** |
++-----------------+       +--------------------+       +----------------------+
+| - nombre        |       | - contactos        |       | - agenda             |
+| - telefono      |       +--------------------+       +----------------------+
+| - email         |       | + agregar()        |       | + mostrar_menu()     |
+| - direccion     |       | + buscar()         |       | + ejecutar()         |
++-----------------+       | + actualizar()     |       | + agregar_contacto() |
+| + __str__()     |       | + eliminar()       |       | + buscar_contacto()  |
+| + actualizar()  |       | + listar()         |       | + actualizar_contacto()|
++-----------------+       | + guardar()        |       | + eliminar_contacto()|
+                          | + cargar()         |       | + listar_contacto()  |
+                          +--------------------+       +----------------------+
+
+Relaciones:
+- AgendaContacto 1..* Contacto   (composición/contenedor)
+- InterfazContacto --> AgendaContacto (dependencia)
+- InterfazContacto ..> Contacto       (crea/lee)
+
+
+
+
+
+
+\####################################
+
+**MANEJO DE ARCHIVOS**                 #
+
+------------------------------------
+
+
+
+1.- contacto.py: Contiene la clase Contacto que representa cada contacto individual. 
+
+2.- agenda\_contacto.py: Contiene la clase AgendaContactos que gestiona la coleccion de contactos y las operaciones CRUD
+
+3.- interfaz\_consola.py: Contiene la clase InterfazConsola que maneja la interacción con el usuario. 
+
+
+
+4.- main.py: Es el punto de entrada de la aplicación que inicia el programa. 
+
+
+
+
+
+**Observaciones:** 
+
+Importaremos los módulos entre ellos.
+Almacenaje de contactos a través de un archivo JSON.
+
+
+
+
+
+
+
+
+
+
+
