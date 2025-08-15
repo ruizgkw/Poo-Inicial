@@ -1,6 +1,6 @@
 class Contacto:
     """
-    Clase que representa un contacto con nombre, teléfono y correo electrónico.
+    Clase que representa un contacto con nombre, teléfono, correo electrónico y direccion del contacto.
 
     Atributos:
         nombre (str): Nombre del contacto.
