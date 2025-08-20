@@ -1,3 +1,9 @@
+"""
+    Módulo AgendaContactos
+    ----------------------
+    Contiene la clase AgendaContactos, que gestiona la colección de contactos
+    y ofrece operaciones CRUD, persistencia y búsqueda.
+    """
 import json
 import os
 from contacto import Contacto
